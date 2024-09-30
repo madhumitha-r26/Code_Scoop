@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.navbar{
+    background-color: #000;
+}
+
+.navbar-toggler:focus{
+   border: none;
+}
+
+
+.navbar-toggler:active{
+   border: none;
+}
+
+.navbar-brand{
+    color: #ffffff;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.navbar-brand:hover{
+    color: #ffffff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.navbar .navbar-nav .nav-link{
+    color: #ffffff;  
+    background-color: #000000; 
+}
+
+.main{
+    margin-top: 50px;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.navbar .navbar-nav .nav-link:active{
+    color: #ffffff;
+    background-color: #000000;
+    text-decoration: underline;
+}
+
+footer {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#home,#courses,#contact{
+    background-color: #fff;
+    color: #000000;
+}
+
+#about, #testimonials{
+    background-color: #000000;
+    color: #fff;
+}
