@@ -1,5 +1,4 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
@@ -21,21 +20,19 @@ body {
 .navbar-brand{
     color: #ffffff;
     font-size: 24px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:bold;
 }
 .navbar-brand:hover{
     color: #ffffff;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .navbar .navbar-nav .nav-link{
     color: #ffffff;  
     background-color: #000000; 
+    font-family: "Space Mono", monospace;
 }
 
-.main{
-    margin-top: 50px;
-}
 .navbar .navbar-nav .nav-link:hover{
     color: #ffffff;
     text-decoration: underline;
@@ -47,19 +44,192 @@ body {
     text-decoration: underline;
 }
 
-footer {
-    color: #000;
-    background-color: #fff;
-    text-align: center;
-    padding: 20px;
+.main{
+    margin-top: 50px;
 }
 
-#home,#courses,#contact{
-    background-color: #fff;
+footer {
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #04132e 10%, #002360 100%);
+    text-align: center;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#courses,#contact{
+    background-image: linear-gradient(135deg, #e9defa 10%, #fbfcdb 100%);
     color: #000000;
 }
 
+#home{
+    background: url("imgs/header_bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    color:white;
+    min-height: 70vh;
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+}
+
 #about, #testimonials{
-    background-color: #000000;
+    background-image: linear-gradient(135deg, #04132e 10%, #002360 100%);
     color: #fff;
+}
+
+.header_bg{
+    width: 100%;
+    height: 10%;
+}
+
+.hero__section_container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    height: 450px;
+}
+
+.hero__section_container h1{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.hero__section_container button{
+    height: 50px;
+    padding: 12px;
+    border: none;
+    background-color: #093e99;
+    color: #ffffff;
+}
+
+.hero__section_container button:hover{
+    height: 50px;
+    padding: 12px;
+    border: none;
+    background-color: #001232d6;
+    border: #ffffff 2px solid;
+    color: antiquewhite;
+}
+
+h1{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+}
+
+.ab1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ab2{
+    width: 50%;
+    text-align: justify;
+    font-size: 20px;
+    font-family: "Space Mono", monospace;
+    border:none;
+}
+
+.ab3{
+    width: 50%;
+    border:none;
+}
+
+#courses .col:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.cr{
+    color: #0a0316; 
+    text-decoration: none;
+    text-align: center;
+}
+    
+.cr:hover{
+    color: #0a0316; 
+    text-decoration: underline;
+}
+    
+#courses .card{
+border: none;
+}
+
+#courses .card img{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: 18px;
+    font-family: "Space Mono", monospace;
+}
+
+#testimonials .carousel .card {
+    border: none;
+}
+
+#testimonials .carousel .card .card-text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+}
+
+#courses .card h5{
+    font-family:"Work Sans", sans-serif;
+    text-align: center;
+    font-weight:lighter;
+}
+
+.form{
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    font-size: large ;
+ }
+
+ .form input, .form textarea{
+    outline: none;
+ }
+
+ .cd{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+    text-align: left;
+ }
+
+ .bi{
+    font-size: 1.5rem;
+    cursor: pointer;
+ }
+ .social{
+    
+    height: 50%;
+    margin-top: 50px;
+ }
+
+ .con p, .con address{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+@media (max-width:1024px){
+    .ab1{
+        flex-direction: column;
+    }
+
+    .ab2{
+        width: 100%;
+        text-align: justify;
+        border:none;
+    }
+    
+    .ab3{
+        width: 100%;
+        border:none;
+    }
+
 }
