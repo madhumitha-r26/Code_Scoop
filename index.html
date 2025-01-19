@@ -81,7 +81,9 @@ data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabind
     <section id="courses" class="p-3">
       <h1>EXPLORE OUR COURSES</h1>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+ 
+        <!-- web -->
+         <div class="col" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <div class="card">
           <img src="imgs/web-development.png" alt="web development">
                 <div class="card-body">
@@ -89,7 +91,24 @@ data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabind
                 </div>
               </div>
       </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel1">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+      
+          </div>
+        </div>
+      </div>
     
+
+        <!-- oops-->
       <div class="col">
         <div class="card">
           <img src="imgs/oops.png" alt="oops">
@@ -99,9 +118,10 @@ data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabind
         </div>
       </div> 
     
+
+        <!--dbms -->
       <div class="col">
         <div class="card">
-          
           <img src="imgs/database.png" alt="dbms">
           <div class="card-body">
             <h5 class="card-title">Database Management System</h5>
@@ -113,8 +133,6 @@ data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabind
     <br>
     
     </section>
-
-   
 
     <footer class="fw-medium fs-4">
         <p>© 2024 Code Scoop - All rights reserved.</p>

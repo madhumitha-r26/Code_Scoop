@@ -56,10 +56,11 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#courses,#contact{
+#courses{
     background-image: linear-gradient(135deg, #e9defa 10%, #fbfcdb 100%);
     color: #000000;
 }
+
 
 #home{
     background: url("imgs/header_bg.jpeg");
@@ -71,7 +72,7 @@ footer {
     font-weight: 400;
 }
 
-#about, #testimonials{
+#about{
     background-image: linear-gradient(135deg, #04132e 10%, #002360 100%);
     color: #fff;
 }
@@ -140,17 +141,7 @@ h1{
     cursor: pointer;
 }
 
-.cr{
-    color: #0a0316; 
-    text-decoration: none;
-    text-align: center;
-}
-    
-.cr:hover{
-    color: #0a0316; 
-    text-decoration: underline;
-}
-    
+
 #courses .card{
 border: none;
 }
@@ -168,231 +159,8 @@ p{
     font-family: "Space Mono", monospace;
 }
 
-#testimonials .carousel .card {
-    border: none;
-}
-
-#testimonials .carousel .card .card-text{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: justify;
-}
-
 #courses .card h5{
     font-family:"Work Sans", sans-serif;
     text-align: center;
     font-weight:lighter;
 }
-
-address{
-    color: #000000;
-}
-
-form{
-    border: none;
-    padding: 25px;
-    width: 100%;
-    margin:auto;
-}
-
-.cn{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-textarea{
-    height: 150px;
-    margin-bottom: 10px;
-}
-
-.cn input{
-    width: 50%;
-}
-
-.social p{
-    text-align: left;
-}
-
-#send_btn{
-    background-color: rgb(1, 3, 55);
-    color:white;
-    border: none;
-    width: 150px;
-    height: 45px;
-    border-radius: 5px;
-    font-weight: 400;
-    align-items: end;
-    }
-    
-    #send_btn:hover{
-    background-color: rgb(9, 12, 99);
-    color:white;
-    border: none;
-    width: 150px;
-    height: 45px;
-    border-radius: 5px;
-    font-weight: 400;
-    }
-
-
-input,textarea{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 15px 5px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-}
-
- a .bi{
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #000;
- }
-
- .carousel-inner {
-    padding: 1em;
-  }
-  .card {
-    margin: 0 0.5em;
-    border-radius: 0;
-    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-    font-size: 0.9em;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 6vh;
-    height: 6vh;
-    background-color: #e1e1e1;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.5;
-  }
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    opacity: 0.8;
-  }
-
-  .carousel-inner {
-    padding: 1em;
-  }
-
-
-@media (max-width:1024px){
-    .ab1{
-        flex-direction: column;
-    }
-
-    .ab2{
-        width: 100%;
-        text-align: justify;
-        border:none;
-    }
-    
-    .ab3{
-        width: 100%;
-        border:none;
-    }
-
-    .cn{
-        flex-direction: column;
-    }
-
-    .cn input{
-        width:100%;
-    }
-
-    #send_btn{
-        background-color: rgb(1, 3, 55);
-        color:white;
-        border: none;
-        width: 100%;
-        height: 45px;
-        border-radius: 5px;
-        font-weight: 400;
-        align-items: end;
-        margin-bottom: 20px;
-        }
-        
-        #send_btn:hover{
-        background-color: rgb(9, 12, 99);
-        color:white;
-        border: none;
-        width: 100%;
-        height: 45px;
-        border-radius: 5px;
-        font-weight: 400;
-        }
-
-        input,textarea{
-            width: 100%;
-            padding: 12px 20px;
-            margin: 18px 5px;
-            border-radius: 10px;
-            outline: none;
-            border: none;
-            
-        }
-      
-        #contact{
-            flex-direction: column-reverse;
-        }
-}
-
-
-.img-wrapper {
-    max-width: 100%;
-    height: 65vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-
-  @media screen and (min-width: 576px) {
-
-    .img-wrapper {
-      height: 21vw;
-    }
-    .carousel-inner {
-        display: flex;
-        width: 90%;
-        margin-inline: auto;
-        padding: 1em 0;
-        overflow: hidden;
-      }
-      .carousel-item {
-        display: block;
-        margin-right: 0;
-        flex: 0 0 calc(100% / 2);
-      }
-  }
-  
-  
-  @media screen and (min-width: 1024px) {
-    .carousel-item {
-      display: block;
-      margin-right: 0;
-      flex: 0 0 calc(100% / 3);
-    }
-  }
-  .carousel .card {
-    margin: 0 0.5em;
-    border: 0;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 3rem;
-    height: 3rem;
-    background-color: grey;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
