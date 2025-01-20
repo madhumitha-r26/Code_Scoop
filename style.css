@@ -19,10 +19,18 @@ body {
 
 .navbar-brand{
     color: #ffffff;
+    background-color: #000000;
     font-size: 24px;
     font-family:'Courier New', Courier, monospace;
     font-weight:bold;
 }
+
+.navbar-brand:hover{
+    color: #ffffff;
+}
+
+
+
 .navbar-brand:hover{
     color: #ffffff;
 }
@@ -141,7 +149,6 @@ h1{
     cursor: pointer;
 }
 
-
 #courses .card{
 border: none;
 }
@@ -160,7 +167,25 @@ p{
 }
 
 #courses .card h5{
-    font-family:"Work Sans", sans-serif;
+    font-family: "Space Mono", monospace;
     text-align: center;
     font-weight:lighter;
+}
+
+
+@media (max-width:1024px){
+    .ab1{
+        flex-direction: column-reverse;
+    }
+
+    .ab2{
+        width: 100%;
+        text-align: justify;
+        border:none;
+    }
+    
+    .ab3{
+        width: 100%;
+        border:none;
+    }
 }
