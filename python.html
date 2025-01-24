@@ -327,6 +327,69 @@ Child class is the class that inherits from another class, also called derived c
               </div>
             </div>
           </div>
+          <br>
+
+        <h3 class="text-center">QUIZ</h3>
+        <div class="container">
+          <form id="quizForm">
+            <div class="mb-3">
+              <p>1. What is Python primarily used for?</p>
+              <input type="radio" name="q1" value="1" /> Data analysis and web development<br />
+              <input type="radio" name="q1" value="0" /> Hardware programming<br />
+              <input type="radio" name="q1" value="0" /> Database design only<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>2. Which of the following is a valid Python data type?</p>
+              <input type="radio" name="q2" value="0" /> Sequence<br />
+              <input type="radio" name="q2" value="1" /> Tuple<br />
+              <input type="radio" name="q2" value="0" /> Map<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>3. What is the output of <code>print(2**3)</code>?</p>
+              <input type="radio" name="q3" value="0" /> 5<br />
+              <input type="radio" name="q3" value="1" /> 8<br />
+              <input type="radio" name="q3" value="0" /> 6<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>4. What does the <code>len()</code> function do in Python?</p>
+              <input type="radio" name="q4" value="0" /> Calculates factorial<br />
+              <input type="radio" name="q4" value="1" /> Returns the length of an object<br />
+              <input type="radio" name="q4" value="0" /> Finds maximum value<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>5. Which keyword is used to define a function in Python?</p>
+              <input type="radio" name="q5" value="0" /> func<br />
+              <input type="radio" name="q5" value="1" /> def<br />
+              <input type="radio" name="q5" value="0" /> function<br />
+            </div>
+      
+            <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+          </form>
+          <div id="result" class="mt-3"></div>
+        </div>
+        <script>
+          function checkQuiz() {
+            const form = document.getElementById("quizForm");
+            const formData = new FormData(form);
+            let score = 0;
+        
+            // Loop through the questions and calculate the score
+            for (let [key, value] of formData.entries()) {
+              score += parseInt(value);
+            }
+        
+            // Display the result
+            document.getElementById("result").innerHTML = `
+              <h4>Your Score: ${score}/5</h4>
+              ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+            `;
+          }
+        </script>
+      
         </div>
       </section>
 

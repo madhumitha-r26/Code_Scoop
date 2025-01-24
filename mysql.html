@@ -342,7 +342,69 @@
               </div>
             </div>
           </div>
-          
+          <br>
+
+        <h3 class="text-center">QUIZ</h3>
+        <div class="container">
+          <form id="quizForm">
+            <div class="mb-3">
+              <p>1. What does SQL stand for?</p>
+              <input type="radio" name="q1" value="0" /> Structured Query Logic<br />
+              <input type="radio" name="q1" value="1" /> Structured Query Language<br />
+              <input type="radio" name="q1" value="0" /> Standard Query Language<br />
+            </div>
+        
+            <div class="mb-3">
+              <p>2. Which command is used to create a new table in MySQL?</p>
+              <input type="radio" name="q2" value="0" /> INSERT<br />
+              <input type="radio" name="q2" value="1" /> CREATE TABLE<br />
+              <input type="radio" name="q2" value="0" /> ALTER TABLE<br />
+            </div>
+        
+            <div class="mb-3">
+              <p>3. What does the WHERE clause do in a SQL query?</p>
+              <input type="radio" name="q3" value="0" /> Sorts the data<br />
+              <input type="radio" name="q3" value="1" /> Filters records<br />
+              <input type="radio" name="q3" value="0" /> Groups data<br />
+            </div>
+        
+            <div class="mb-3">
+              <p>4. Which MySQL data type is used to store large text?</p>
+              <input type="radio" name="q4" value="1" /> TEXT<br />
+              <input type="radio" name="q4" value="0" /> VARCHAR<br />
+              <input type="radio" name="q4" value="0" /> CHAR<br />
+            </div>
+        
+            <div class="mb-3">
+              <p>5. What does the PRIMARY KEY constraint do?</p>
+              <input type="radio" name="q5" value="1" /> Uniquely identifies each row<br />
+              <input type="radio" name="q5" value="0" /> Links two tables<br />
+              <input type="radio" name="q5" value="0" /> Ensures a column is not NULL<br />
+            </div>
+        
+            <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+          </form>
+          <div id="result" class="mt-3"></div>
+        </div>
+        <script>
+          function checkQuiz() {
+            const form = document.getElementById("quizForm");
+            const formData = new FormData(form);
+            let score = 0;
+        
+            // Loop through the questions and calculate the score
+            for (let [key, value] of formData.entries()) {
+              score += parseInt(value);
+            }
+        
+            // Display the result
+            document.getElementById("result").innerHTML = `
+              <h4>Your Score: ${score}/5</h4>
+              ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+            `;
+          }
+        </script>
+        
         </div>
       </section>
 

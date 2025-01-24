@@ -321,14 +321,76 @@
               </div>
             </div>
           </div>
-          
         </div>
+        <br>
+
+        <h3 class="text-center">QUIZ</h3>
+  <div class="container">
+    <form id="quizForm">
+      <div class="mb-3">
+        <p>1. What is HTML used for?</p>
+        <input type="radio" name="q1" value="1" /> Designing websites<br />
+        <input type="radio" name="q1" value="0" /> Styling web pages<br />
+        <input type="radio" name="q1" value="0" /> Programming logic<br />
+      </div>
+
+      <div class="mb-3">
+        <p>2. Which is a semantic element?</p>
+        <input type="radio" name="q2" value="0" /> &lt;div&gt;<br />
+        <input type="radio" name="q2" value="1" /> &lt;article&gt;<br />
+        <input type="radio" name="q2" value="0" /> &lt;span&gt;<br />
+      </div>
+
+      <div class="mb-3">
+        <p>3. What is the difference between block and inline elements?</p>
+        <input type="radio" name="q3" value="1" /> Block elements occupy full width<br />
+        <input type="radio" name="q3" value="0" /> Inline elements start on a new line<br />
+        <input type="radio" name="q3" value="0" /> Block elements are always inline<br />
+      </div>
+
+      <div class="mb-3">
+        <p>4. What does the &lt;DOCTYPE&gt; declaration do?</p>
+        <input type="radio" name="q4" value="0" /> Adds metadata<br />
+        <input type="radio" name="q4" value="0" /> Links CSS<br />
+        <input type="radio" name="q4" value="1" /> Ensures proper rendering<br />
+      </div>
+
+      <div class="mb-3">
+        <p>5. Which tag is used for hyperlinks?</p>
+        <input type="radio" name="q5" value="0" /> &lt;link&gt;<br />
+        <input type="radio" name="q5" value="1" /> &lt;a&gt;<br />
+        <input type="radio" name="q5" value="0" /> &lt;meta&gt;<br />
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+    </form>
+    <div id="result" class="mt-3"></div>
+  </div>
+  <script>
+    function checkQuiz() {
+      const form = document.getElementById("quizForm");
+      const formData = new FormData(form);
+      let score = 0;
+  
+      // Loop through the questions and calculate the score
+      for (let [key, value] of formData.entries()) {
+        score += parseInt(value);
+      }
+  
+      // Display the result
+      document.getElementById("result").innerHTML = `
+        <h4>Your Score: ${score}/5</h4>
+        ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+      `;
+    }
+  </script>
       </section>
 
       <footer class="fw-medium fs-4">
         <p>© 2024 Code Scoop - All rights reserved.</p>
       </footer>
     </div>
+    
 
     <script src="script.js"></script>
     <script

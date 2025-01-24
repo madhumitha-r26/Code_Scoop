@@ -327,7 +327,69 @@
               </div>
             </div>
           </div>
-          
+          <br>
+
+        <h3 class="text-center">QUIZ</h3>
+        <div class="container">
+          <form id="quizForm">
+            <div class="mb-3">
+              <p>1. What is MongoDB?</p>
+              <input type="radio" name="q1" value="1" /> A NoSQL database<br />
+              <input type="radio" name="q1" value="0" /> A relational database<br />
+              <input type="radio" name="q1" value="0" /> A programming language<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>2. Which data format does MongoDB use to store documents?</p>
+              <input type="radio" name="q2" value="1" /> BSON<br />
+              <input type="radio" name="q2" value="0" /> JSON only<br />
+              <input type="radio" name="q2" value="0" /> XML<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>3. Which command is used to display all documents in a MongoDB collection?</p>
+              <input type="radio" name="q3" value="1" /> <code>db.collection.find()</code><br />
+              <input type="radio" name="q3" value="0" /> <code>db.collection.show()</code><br />
+              <input type="radio" name="q3" value="0" /> <code>db.collection.fetch()</code><br />
+            </div>
+      
+            <div class="mb-3">
+              <p>4. What does sharding in MongoDB help achieve?</p>
+              <input type="radio" name="q4" value="0" /> Vertical scaling<br />
+              <input type="radio" name="q4" value="1" /> Horizontal scaling<br />
+              <input type="radio" name="q4" value="0" /> Data encryption<br />
+            </div>
+      
+            <div class="mb-3">
+              <p>5. Which of the following is a valid MongoDB query operator?</p>
+              <input type="radio" name="q5" value="0" /> <code>=</code><br />
+              <input type="radio" name="q5" value="1" /> <code>$gte</code><br />
+              <input type="radio" name="q5" value="0" /> <code>LIKE</code><br />
+            </div>
+      
+            <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+          </form>
+          <div id="result" class="mt-3"></div>
+        </div>
+        <script>
+          function checkQuiz() {
+            const form = document.getElementById("quizForm");
+            const formData = new FormData(form);
+            let score = 0;
+        
+            // Loop through the questions and calculate the score
+            for (let [key, value] of formData.entries()) {
+              score += parseInt(value);
+            }
+        
+            // Display the result
+            document.getElementById("result").innerHTML = `
+              <h4>Your Score: ${score}/5</h4>
+              ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+            `;
+          }
+        </script>
+      
         </div>
       </section>
 

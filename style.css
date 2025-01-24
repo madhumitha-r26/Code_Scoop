@@ -175,6 +175,11 @@ p{
     font-family: "Space Mono", monospace;
 }
 
+
+#quizForm p{
+    font-weight: 700;
+}
+
 #courses .card h5{
     font-family: "Space Mono", monospace;
     text-align: center;

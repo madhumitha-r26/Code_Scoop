@@ -278,7 +278,70 @@ data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabind
       </div>
     </div>
   </div>
-  
+  <br>
+
+  <h3 class="text-center">QUIZ</h3>
+
+  <div class="container">
+    <form id="quizForm">
+        <div class="mb-3">
+            <p>1. What is C++ primarily used for?</p>
+            <input type="radio" name="q1" value="1" /> System programming<br />
+            <input type="radio" name="q1" value="0" /> Styling web pages<br />
+            <input type="radio" name="q1" value="0" /> Document creation<br />
+        </div>
+
+        <div class="mb-3">
+            <p>2. What does the keyword <code>virtual</code> indicate in C++?</p>
+            <input type="radio" name="q2" value="0" /> It defines a constant<br />
+            <input type="radio" name="q2" value="1" /> It allows method overriding in inheritance<br />
+            <input type="radio" name="q2" value="0" /> It creates a pointer<br />
+        </div>
+
+        <div class="mb-3">
+            <p>3. Which of these is a correct syntax for declaring a pointer in C++?</p>
+            <input type="radio" name="q3" value="0" /> int pointer;<br />
+            <input type="radio" name="q3" value="0" /> int ptr*;<br />
+            <input type="radio" name="q3" value="1" /> int *ptr;<br />
+        </div>
+
+        <div class="mb-3">
+            <p>4. What is the difference between <code>public</code> and <code>private</code> access specifiers?</p>
+            <input type="radio" name="q4" value="1" /> Public allows access outside the class<br />
+            <input type="radio" name="q4" value="0" /> Private allows access outside the class<br />
+            <input type="radio" name="q4" value="0" /> Both allow access outside the class<br />
+        </div>
+
+        <div class="mb-3">
+            <p>5. What is the role of a constructor in C++?</p>
+            <input type="radio" name="q5" value="0" /> It defines data members<br />
+            <input type="radio" name="q5" value="1" /> It initializes objects<br />
+            <input type="radio" name="q5" value="0" /> It deletes objects<br />
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+    </form>
+    <div id="result" class="mt-3"></div>
+</div>
+<script>
+    function checkQuiz() {
+        const form = document.getElementById("quizForm");
+        const formData = new FormData(form);
+        let score = 0;
+
+        // Loop through the questions and calculate the score
+        for (let [key, value] of formData.entries()) {
+            score += parseInt(value);
+        }
+
+        // Display the result
+        document.getElementById("result").innerHTML = `
+            <h4>Your Score: ${score}/5</h4>
+            ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+        `;
+    }
+</script>
+
 
 </div>
 </section>

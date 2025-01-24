@@ -329,8 +329,71 @@
               </div>
             </div>
           </div>
-          
+          <br>
     
+          <h3 class="text-center">QUIZ</h3>
+
+          <div class="container">
+            <form id="quizForm">
+              <div class="mb-3">
+                <p>1. What does CSS stand for?</p>
+                <input type="radio" name="q1" value="1" /> Cascading Style Sheets<br />
+                <input type="radio" name="q1" value="0" /> Computer Style Sheets<br />
+                <input type="radio" name="q1" value="0" /> Creative Style Sheets<br />
+              </div>
+          
+              <div class="mb-3">
+                <p>2. Which property is used to change the text color of an element?</p>
+                <input type="radio" name="q2" value="1" /> color<br />
+                <input type="radio" name="q2" value="0" /> background-color<br />
+                <input type="radio" name="q2" value="0" /> text-color<br />
+              </div>
+          
+              <div class="mb-3">
+                <p>3. How do you apply a class selector in CSS?</p>
+                <input type="radio" name="q3" value="1" /> .classname<br />
+                <input type="radio" name="q3" value="0" /> #classname<br />
+                <input type="radio" name="q3" value="0" /> classname<br />
+              </div>
+          
+              <div class="mb-3">
+                <p>4. What is the default position value in CSS?</p>
+                <input type="radio" name="q4" value="1" /> static<br />
+                <input type="radio" name="q4" value="0" /> relative<br />
+                <input type="radio" name="q4" value="0" /> absolute<br />
+              </div>
+          
+              <div class="mb-3">
+                <p>5. Which CSS property is used to change the background color?</p>
+                <input type="radio" name="q5" value="1" /> background-color<br />
+                <input type="radio" name="q5" value="0" /> color<br />
+                <input type="radio" name="q5" value="0" /> bg-color<br />
+              </div>
+          
+              <button type="button" class="btn btn-primary" onclick="checkQuiz()">Submit</button>
+            </form>
+            <div id="result" class="mt-3"></div>
+          </div>
+          <script>
+            function checkQuiz() {
+              const form = document.getElementById("quizForm");
+              const formData = new FormData(form);
+              let score = 0;
+          
+              // Loop through the questions and calculate the score
+              for (let [key, value] of formData.entries()) {
+                score += parseInt(value);
+              }
+          
+              // Display the result
+              document.getElementById("result").innerHTML = `
+                <h4>Your Score: ${score}/5</h4>
+                ${score === 5 ? "Excellent! You got all answers correct." : "Keep practicing and try again!"}
+              `;
+            }
+          </script>
+          
+
         </div>
       </section>
 
